@@ -1,0 +1,31 @@
+<form [formGroup]="userForm" (ngSubmit)="submitUser()" class="row">
+    <div class="col-12 col-sm-6">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" formControlName="firstName"/>
+    </div>
+    <div class="col-12 col-sm-6">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" formControlName="lastName"/>
+    </div>
+    <div class="col-12 col-sm-6">
+        <label for="company">Company</label>
+        <input type="text" id="company" formControlName="company"/>
+    </div>
+    <div class="col-12 col-sm-6">
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email"/>
+    </div>
+    <div class="col-12 col-sm-6">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" formControlName="phone"/>
+    </div>
+    <div class="col-12 col-sm-6">
+        <label for="address">Address</label>
+        <input type="text" id="address" formControlName="address"/>
+    </div>
+    <div class="col-12">
+        <button type="submit" id="submit" class="btn btn-primary" style="margin-right: 15px;">Submit</button>
+        <span class="errorMsg" *ngIf="showError">Error! Form is not valid.</span>
+        <span class="successMsg" *ngIf="showSuccess">Success! User has been submitted.</span>
+    </div>
+</form>
